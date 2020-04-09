@@ -1,0 +1,98 @@
+<!DOCTYPE html><html><head><title>TAD</title><meta name=viewport content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=0"><meta http-equiv=Content-Type content="text/html; charset=utf-8"><meta name=msapplication-tap-highlight content=no><meta name=format-detection content="telephone=no"><meta name=Content-Security-Policy content="default-src 'self' gap://ready file://* *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"><link rel=manifest href=/assets/manifest.json><meta name=mobile-web-app-capable content=yes><meta name=application-name content=template><link rel=icon sizes=192x192 href=assets/images/chrome-touch-icon-192x192.png><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta name=apple-mobile-web-app-title content=template><link rel=apple-touch-icon href=assets/images/apple-touch-icon.png><meta name=theme-color content=#00bcd4><link rel=apple-touch-icon sizes=57x57 href=assets/images/favicon/apple-icon-57x57.png><link rel=apple-touch-icon sizes=60x60 href=assets/images/favicon/apple-icon-60x60.png><link rel=apple-touch-icon sizes=72x72 href=assets/images/favicon/apple-icon-72x72.png><link rel=apple-touch-icon sizes=76x76 href=assets/images/favicon/apple-icon-76x76.png><link rel=apple-touch-icon sizes=114x114 href=assets/images/favicon/apple-icon-114x114.png><link rel=apple-touch-icon sizes=120x120 href=assets/images/favicon/apple-icon-120x120.png><link rel=apple-touch-icon sizes=144x144 href=assets/images/favicon/apple-icon-144x144.png><link rel=apple-touch-icon sizes=152x152 href=assets/images/favicon/apple-icon-152x152.png><link rel=apple-touch-icon sizes=180x180 href=assets/images/favicon/apple-icon-180x180.png><link rel=icon type=image/png sizes=192x192 href=assets/images/favicon/android-icon-192x192.png><link rel=icon type=image/png sizes=32x32 href=assets/images/favicon/favicon-32x32.png><link rel=icon type=image/png sizes=96x96 href=assets/images/favicon/favicon-96x96.png><link rel=icon type=image/png sizes=16x16 href=assets/images/favicon/favicon-16x16.png><script src=cordova.js></script><style>
+.preloader{position:fixed;top:-30%;left:-30%;right:-30%;bottom:-30%;z-index:9999999999;width:150%;height:150%;margin:auto;overflow:hidden;background:#eee;border-radius:100%;transition:all 1s ease-in}.tablet .preloader,.mobile .preloader,.preloader.is-hide{display:none}
+        .preloader__cont{position:absolute;top:50%;left:50%;display:inline-block;text-align:center;transform:translate(-50%,-50%)}
+        .epicBallNew {
+		width: 225px;
+		height: 250px;
+		background-image: url(assets/images/epicBallNew.png);
+		-webkit-animation: epicBallNew 1.6s steps(40) infinite;
+	}
+
+	@-webkit-keyframes epicBallNew {
+		from {
+			background-position: 0 0;
+			}
+		  to {
+		  	background-position: -9000px 0;
+		  	}
+	}    </style></head><body online="" window-resize=""><div id=app ng-strict-di=""></div><div class=preloader preloader=""><div class=preloader__cont><div class=epicBallNew></div></div></div><script id=load-script>
+    document.addEventListener("DOMContentLoaded", load);
+
+    !function(a){var b=/iPhone/i,c=/iPod/i,d=/iPad/i,e=/(?=.*\bAndroid\b)(?=.*\bMobile\b)/i,f=/Android/i,g=/(?=.*\bAndroid\b)(?=.*\bSD4930UR\b)/i,h=/(?=.*\bAndroid\b)(?=.*\b(?:KFOT|KFTT|KFJWI|KFJWA|KFSOWI|KFTHWI|KFTHWA|KFAPWI|KFAPWA|KFARWI|KFASWI|KFSAWI|KFSAWA)\b)/i,i=/Windows Phone/i,j=/(?=.*\bWindows\b)(?=.*\bARM\b)/i,k=/BlackBerry/i,l=/BB10/i,m=/Opera Mini/i,n=/(CriOS|Chrome)(?=.*\bMobile\b)/i,o=/(?=.*\bFirefox\b)(?=.*\bMobile\b)/i,p=new RegExp("(?:Nexus 7|BNTV250|Kindle Fire|Silk|GT-P1000)","i"),q=function(a,b){return a.test(b)},r=function(a){var r=a||navigator.userAgent,s=r.split("[FBAN");if("undefined"!=typeof s[1]&&(r=s[0]),s=r.split("Twitter"),"undefined"!=typeof s[1]&&(r=s[0]),this.apple={phone:q(b,r),ipod:q(c,r),tablet:!q(b,r)&&q(d,r),device:q(b,r)||q(c,r)||q(d,r)},this.amazon={phone:q(g,r),tablet:!q(g,r)&&q(h,r),device:q(g,r)||q(h,r)},this.android={phone:q(g,r)||q(e,r),tablet:!q(g,r)&&!q(e,r)&&(q(h,r)||q(f,r)),device:q(g,r)||q(h,r)||q(e,r)||q(f,r)},this.windows={phone:q(i,r),tablet:q(j,r),device:q(i,r)||q(j,r)},this.other={blackberry:q(k,r),blackberry10:q(l,r),opera:q(m,r),firefox:q(o,r),chrome:q(n,r),device:q(k,r)||q(l,r)||q(m,r)||q(o,r)||q(n,r)},this.seven_inch=q(p,r),this.any=this.apple.device||this.android.device||this.windows.device||this.other.device||this.seven_inch,this.phone=this.apple.phone||this.android.phone||this.windows.phone,this.tablet=this.apple.tablet||this.android.tablet||this.windows.tablet,"undefined"==typeof window)return this},s=function(){var a=new r;return a.Class=r,a};"undefined"!=typeof module&&module.exports&&"undefined"==typeof window?module.exports=r:"undefined"!=typeof module&&module.exports&&"undefined"!=typeof window?module.exports=s():"function"==typeof define&&define.amd?define("isMobile",[],a.isMobile=s()):a.isMobile=s()}(this);
+
+    function load() {
+
+        var script = document.getElementById('load-script');
+        var el = document.getElementById('app');
+        var files = {
+            js:  [
+                <!-- app:js -->
+                "build/app.f385746d00dd22c8b1a8.js",
+                "build/app_mobile.116d27bc0e4891215366.js"
+                <!-- endinject -->
+            ],
+            css: [
+                <!-- style:css -->
+                "build/style-a99534e75c.min.css",
+                "build/style_mobile-231e1f19bb.min.css"
+                <!-- endinject -->
+            ]
+        };
+
+        function addStyle (href) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = href;
+            document.head.appendChild(link);
+            return link;
+        };
+
+        function addScript (src) {
+            var script = document.createElement('script');
+            script.src = src;
+            script.async = false;
+            script.defer = true;
+            document.body.appendChild(script);
+            return script;
+        };
+
+        function checkNameForArr (arr, name) {
+            return ~arr.indexOf(name);
+        };
+
+        if (isMobile.phone) {
+            document.body.classList.add('mobile');
+
+            el.innerHTML = [
+                '<section class="page-wrapper" ng-controller="AppCtrl">',
+                '   <div ui-view="header"></div>',
+                '   <ui-view></ui-view>',
+                '</section>'
+            ].join('');
+        }
+        else {
+            el.innerHTML = '<ui-view></ui-view>';
+        }
+
+        files.css.forEach(function (item) {
+            var filePath = item.match(/([a-z_]*)/g);
+            var fileName = isMobile.phone ? 'style_mobile' : 'style';
+
+            if (checkNameForArr(filePath, fileName)) {
+                addStyle(item);
+            }
+        });
+
+        files.js.forEach(function (item) {
+            var filePath = item.match(/([a-z_]*)/g);
+            var fileName = isMobile.phone ? 'app_mobile' : 'app';
+
+            if (checkNameForArr(filePath, fileName)) {
+                addScript(item);
+            }
+        });
+
+        document.removeEventListener("DOMContentLoaded", load);
+        script.parentNode.removeChild(script);
+    }
+</script><script src=build/vendor.ea9a6248901452f45454.js defer=""></script><script src=https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js></script><script></script></body></html>
